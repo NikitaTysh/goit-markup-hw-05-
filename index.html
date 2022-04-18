@@ -13,6 +13,17 @@
         
         </head>
     <body>
+        <div data-modal class="backdrop is-hidden">
+            <div class="modal">
+                <button  data-modal-close class="btn-close-modal">
+                    
+                    <svg class="close-svg" width="11" height="11">
+                        <use href="./images/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+            
+        </div>
         <!-- шапка -->
         <header class="page-header">
             <div class="container header-container">
@@ -50,7 +61,7 @@
                     Эффективные решения
                      для вашего бизнеса
                 </h1>
-                <button class="hero-button" type="button">Заказать услугу</button>
+                <button data-modal-open class="hero-button" type="button">Заказать услугу</button>
              </section>
              <!-- наши преимущества -->
              <section class="section our-advantages-section">
@@ -102,11 +113,23 @@
                     <h2 class="section-title" >Чем мы занимаемся</h2>
                     <ul class="card-set-list list ">
                         <li class="we-do-item card-set-item"> 
-                            <img src="./images/whatwedo/webdevelopment.jpg" alt="webdevelopment" width="370" height="294"></li>
+                            <div class="we-do-img">
+                                <img class="img" src="./images/whatwedo/webdevelopment.jpg" alt="webdevelopment" width="370" height="294">
+                                <p class="we-do-text">Десктопные приложения</p>
+                            </div>
+                        </li>
                         <li class="we-do-item card-set-item"> 
-                            <img src="./images/whatwedo/mobiledevelopment.jpg" alt="mobiledevelopment" width="370" height="294"></li>
+                            <div class="we-do-img">
+                                <img src="./images/whatwedo/mobiledevelopment.jpg" alt="mobiledevelopment" width="370" height="294">
+                                <p class="we-do-text">Мобильные приложения</p>
+                            </div>
+                        </li>
                         <li class="we-do-item card-set-item"> 
-                            <img src="./images/whatwedo/colorpalette.jpg" alt="colorpalette" width="370" height="294"></li>
+                            <div class="we-do-img">
+                                <img src="./images/whatwedo/colorpalette.jpg" alt="colorpalette" width="370" height="294">
+                                <p class="we-do-text"></p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
              </section>
@@ -363,5 +386,7 @@
             
         </div>
         </footer>
+       
+        <script src="./js/modal.js"></script>
     </body>
     </html>
