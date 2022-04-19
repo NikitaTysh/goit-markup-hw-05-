@@ -527,7 +527,6 @@ color: var(--white-color);
     transform: translateY(100%);
     background: rgba(33, 150, 243, 0.9);
     transition: transform 250ms linear;
-    overflow: hidden;
     
     
 }
