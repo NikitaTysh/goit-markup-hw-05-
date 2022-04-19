@@ -48,6 +48,7 @@ img{
 }
 .link{
      text-decoration: none;
+     
 }
 .container{
     width: 1200px;
@@ -274,7 +275,7 @@ margin-bottom: 94px;
     padding: 27px 0;
 
     font-weight: 700;
-    line-height: 16px;
+    line-height: calc(16 / 14);
     text-align: center;
     text-transform: uppercase;
     color: var(--white-color);
@@ -508,10 +509,42 @@ color: var(--white-color);
 
 }
 .ourworks-item{
+  position: relative;  
   margin-top: 30px;
   margin-left: 30px;
   flex-basis: calc(100% / 3 - 30px);
+  
 
+}
+
+
+.works-img-animation{
+    width: 100%;
+    height: 294px ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    background: rgba(33, 150, 243, 0.9);
+    transition: transform 250ms linear;
+    overflow: hidden;
+    
+    
+}
+.ourworks-item:hover .works-img-animation{
+    transform: translateY(0);
+    
+}
+.animation-description{
+    width: 322px;
+    height: 168px;
+    padding: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28/18);
+    color: var(--white-color);
+    
+    
 }
 .ourworks-item:hover,
 .ourworks-item:focus{
@@ -519,6 +552,7 @@ color: var(--white-color);
     0px 1px 1px rgba(0, 0, 0, 0.12), 
     0px 4px 4px rgba(0, 0, 0, 0.06), 
     1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 .works-item-description{
     padding: 20px 24px;
@@ -569,14 +603,16 @@ color: var(--white-color);
 
 }
 .backdrop.is-hidden
-{
-opacity: 0;
-pointer-events: none;
+{   
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
 .btn-close-modal{
     position: absolute;
     top: 0;
     right: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .modal{
     position: relative;
