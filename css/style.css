@@ -114,6 +114,7 @@ body{
     cursor: pointer;
     padding-top: 30px;
     padding-bottom: 30px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .nav-link:focus, 
@@ -144,6 +145,7 @@ body{
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
     padding: 30px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .contact-link:focus,
 .contact-link:hover{
@@ -350,7 +352,9 @@ margin-bottom: 94px;
 .social-logo-link:focus .social-logo-item{
     background-color: var(--blue-color);
 }
-
+.social-logo-link{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .social-logo-item:not(:last-child)
 {
 margin-right: 10px;
@@ -358,6 +362,7 @@ margin-right: 10px;
 .social-logo-svg{
     
 fill: var(--icon-fill);
+transition:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 /* ---------clients------------- */
@@ -383,6 +388,7 @@ fill: var(--icon-fill);
 }
 .clients-svg{
     fill: var(--icon-fill);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .clients-link:hover .clients-svg,
@@ -435,6 +441,7 @@ fill: var(--icon-fill);
     font-weight: 400;
     line-height: calc(24 / 14);   
      color: rgba(255, 255, 255, 0.6);
+     transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-map:hover,
 .footer-contact:hover,
@@ -450,6 +457,7 @@ color: var(--white-color);}
     
     line-height: calc(24 / 14);
     color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .join{
@@ -492,6 +500,10 @@ color: var(--white-color);
     line-height: calc(26 / 16); 
     text-align: center;
     font-size: 16px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    ,
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .button-item:not(:last-child)
 {
@@ -541,9 +553,8 @@ color: var(--white-color);
     font-size: 18px;
     line-height: calc(28/18);
     color: var(--white-color);
-    
-    
 }
+
 .ourworks-item:hover,
 .ourworks-item:focus{
     box-shadow: 
@@ -565,17 +576,21 @@ color: var(--white-color);
     line-height: calc(36 / 18);    
     letter-spacing: 0.06em;
     color: var(--secondary-text);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .works-p{
     
     font-size: 16px;
     line-height: calc(19 / 16);
     color: var(--primery-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current{
     position: relative;
     color:var(--blue-color);
+    
 
 }
 .current::after{
@@ -598,6 +613,7 @@ color: var(--white-color);
     top: 0;
     left: 0;
     z-index: 1;
+   
 
 }
 .backdrop.is-hidden
@@ -613,11 +629,12 @@ color: var(--white-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .modal{
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 528px;
     height: 581px;
-    background-color: var(--white-color);
+    background: var(--white-color);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
