@@ -605,7 +605,7 @@ color: var(--white-color);
     bottom: -4px;
     left: 0;
 }
-/* ----------- */
+/* ----------------- */
 /* -------modal----- */
 .backdrop{
     position: fixed;
@@ -623,6 +623,7 @@ color: var(--white-color);
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    transition: opacity var(--transition-duration) var(--timing-function);
 }
 .btn-close-modal{
     position: absolute;
